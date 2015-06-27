@@ -1,4 +1,5 @@
 call pathogen#infect()
+Helptags
 set nocompatible
 " format
 set autoindent
@@ -7,14 +8,14 @@ set smartindent
 set showmatch
 set textwidth=80
 set title
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 " syntax
 syntax on
 syntax enable
-" support 256 colors in Lion terminal 
+" support 256 colors 
 set t_Co=256
 " files 
 filetype on
@@ -25,3 +26,7 @@ set modeline
 set ls=2
 " colorscheme
 colorscheme molokai
+" format with goimports instead of gofmt on save
+let g:go_fmt_command = "goimports"
+" enable fmt on save
+let g:go_fmt_autosave = 1
